@@ -1,0 +1,557 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f6fbf6;
+  color: #1f2f22;
+  line-height: 1.6;
+}
+
+.navbar {
+  background-color: #111111;
+  border-bottom: 2px solid #2e7d32;
+  padding: 14px 0;
+}
+
+.navbar-brand {
+  color: #4caf50 !important;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.navbar-nav .nav-link {
+  color: #cccccc !important;
+  margin: 0 6px;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #4caf50 !important;
+}
+
+.navbar-toggler {
+  border-color: #4caf50;
+}
+
+.hero {
+  background-color: #111111;
+  border-bottom: 1px solid #1a1a1a;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.hero h1 span {
+  color: #4caf50;
+}
+
+.hero p {
+  font-size: 17px;
+  color: #888888;
+  margin-bottom: 28px;
+}
+
+.btn-green {
+  background-color: #2e7d32;
+  color: #ffffff;
+  padding: 10px 28px;
+  border: none;
+  border-radius: 4px;
+  font-size: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.2s;
+}
+
+.btn-green:hover {
+  background-color: #4caf50;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.btn-outline-green {
+  background-color: transparent;
+  color: #4caf50;
+  padding: 10px 28px;
+  border: 1px solid #4caf50;
+  border-radius: 4px;
+  font-size: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s;
+  margin-left: 10px;
+}
+
+.btn-outline-green:hover {
+  background-color: #2e7d32;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.section {
+  padding: 50px 0;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.section-title span {
+  color: #4caf50;
+}
+
+.section-divider {
+  width: 40px;
+  height: 3px;
+  background-color: #2e7d32;
+  margin-bottom: 28px;
+}
+
+.job-card {
+  background-color: #141414;
+  border: 1px solid #1f1f1f;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.job-card:hover {
+  border-color: #4caf50;
+  transform: translateY(-2px);
+}
+
+.job-card h5 {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.job-card .company {
+  color: #4caf50;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.job-card .meta {
+  color: #666666;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.job-card p {
+  color: #888888;
+  font-size: 13px;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.job-card a {
+  color: #4caf50;
+  font-size: 13px;
+  text-decoration: none;
+  border: 1px solid #2e7d32;
+  padding: 4px 14px;
+  border-radius: 3px;
+  transition: all 0.2s;
+}
+
+.job-card a:hover {
+  background-color: #2e7d32;
+  color: #ffffff;
+}
+
+.category-card {
+  background-color: #141414;
+  border: 1px solid #1f1f1f;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 16px;
+  text-align: center;
+  transition: border-color 0.2s;
+}
+
+.category-card:hover {
+  border-color: #4caf50;
+}
+
+.category-card h5 {
+  color: #4caf50;
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.category-card p {
+  color: #666666;
+  font-size: 12px;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+}
+
+.features-list li {
+  color: #aaaaaa;
+  padding: 8px 0;
+  border-bottom: 1px solid #1a1a1a;
+  font-size: 14px;
+}
+
+.features-list li::before {
+  content: "✓ ";
+  color: #4caf50;
+  font-weight: bold;
+}
+
+ol li {
+  color: #aaaaaa;
+  padding: 6px 0;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.form-wrapper {
+  background-color: #141414;
+  border: 1px solid #1f1f1f;
+  border-radius: 8px;
+  padding: 32px;
+}
+
+.form-wrapper h2 {
+  color: #ffffff;
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.form-wrapper p {
+  color: #666666;
+  font-size: 13px;
+  margin-bottom: 24px;
+}
+
+label {
+  display: block;
+  color: #3f5843;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+input[type="file"],
+select,
+textarea {
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #93b099;
+  border-radius: 4px;
+  color: #1f2f22;
+  padding: 9px 12px;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #3b6f41;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  margin-right: 6px;
+  margin-bottom: 0;
+}
+
+input[type="submit"] {
+  background-color: #3b6f41;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 15px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+input[type="submit"]:hover {
+  background-color: #4f8d57;
+}
+
+.contact-info {
+  background-color: #141414;
+  border: 1px solid #1f1f1f;
+  border-radius: 6px;
+  padding: 24px;
+}
+
+.contact-info h4 {
+  color: #4caf50;
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.contact-info p {
+  color: #888888;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: #132017;
+  border-top: 2px solid #4d7f54;
+  color: #e9f3ea;
+  padding: 40px 0 20px 0;
+  margin-top: 60px;
+}
+
+.footer-brand {
+  color: #4caf50;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.footer-desc {
+  color: #555555;
+  font-size: 13px;
+  margin-bottom: 0;
+}
+
+.footer-title {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 6px;
+}
+
+.footer-links a {
+  color: #666666;
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #4caf50;
+}
+
+.footer-bottom {
+  border-top: 1px solid #1a1a1a;
+  margin-top: 30px;
+  padding-top: 16px;
+  text-align: center;
+  color: #444444;
+  font-size: 12px;
+}
+
+.section p {
+  color: #888888;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.section h3 {
+  color: #cccccc;
+  font-size: 15px;
+  margin-top: 14px;
+  margin-bottom: 4px;
+}
+
+a {
+  color: #2f6a39;
+}
+
+a:hover {
+  color: #1f4e28;
+}
+
+header,
+nav,
+main {
+  width: min(1100px, 92%);
+  margin-inline: auto;
+}
+
+header {
+  text-align: center;
+  padding: 30px 0 16px;
+}
+
+header h1 {
+  font-size: clamp(1.8rem, 3.4vw, 2.5rem);
+  color: #1f3a24;
+  margin-bottom: 6px;
+}
+
+header p {
+  color: #4e6552;
+}
+
+nav {
+  text-align: center;
+  background-color: #ffffff;
+  border: 1px solid #b7cbb9;
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin-bottom: 22px;
+}
+
+nav a {
+  display: inline-block;
+  color: #2f4f34;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+nav a:hover {
+  color: #2f6a39;
+  background-color: #eaf4eb;
+}
+
+main {
+  padding-bottom: 30px;
+}
+
+section {
+  background-color: #ffffff;
+  border: 1px solid #c5d7c7;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+section h2 {
+  color: #1f3a24;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+section h3 {
+  color: #35523a;
+  margin-top: 12px;
+  margin-bottom: 5px;
+}
+
+section p,
+section li {
+  color: #495f4d;
+}
+
+ul,
+ol {
+  padding-left: 20px;
+  margin-top: 8px;
+}
+
+section > a {
+  display: inline-block;
+  border: 1px solid #4f8d57;
+  color: #2f6a39;
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  margin-top: 8px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+section > a:hover {
+  background-color: #3b6f41;
+  color: #ffffff;
+}
+
+form {
+  margin-top: 12px;
+}
+
+.auth-section {
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.auth-login {
+  max-width: 500px;
+}
+
+.auth-section form br {
+  display: none;
+}
+
+.auth-section input[type="checkbox"] + label,
+.auth-section input[type="radio"] + label {
+  display: inline;
+  margin-right: 14px;
+}
+
+.auth-section input[type="submit"] {
+  margin-top: 8px;
+}
+
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+footer {
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 6px;
+}
+
+footer a {
+  color: #d5ead7;
+}
+
+footer a:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 640px) {
+  section {
+    padding: 16px;
+  }
+
+  nav a {
+    margin: 2px 0;
+  }
+}
