@@ -1,0 +1,66 @@
+<div class="container">
+  <div class="section">
+    <div class="section-title">Contact <span>Us</span></div>
+    <div class="section-divider"></div>
+    <p style="color:#888; font-size:14px;">Have a question or need help? Fill out the form below and we will get back to you.</p>
+  </div>
+
+  <div class="section">
+    <div class="row">
+
+      <div class="col-md-4 mb-4">
+        <div class="contact-info">
+          <h4>Our Information</h4>
+          <p>📧 contact&#64;unemployednot.com</p>
+          <p>📞 +92 3021234567</p>
+          <p>📍 Bahria Town, Civic Center, Rawalpindi, Pakistan</p>
+        </div>
+      </div>
+
+      <div class="col-md-8">
+        <div class="form-wrapper">
+
+          @if (submitted) {
+            <div class="alert-success">
+              Message sent successfully! We will get back to you soon.
+            </div>
+          }
+
+          @if (!submitted) {
+            <form (ngSubmit)="onSubmit()">
+
+              <label>Full Name</label>
+              <input type="text" [(ngModel)]="form.name" name="name" placeholder="Enter your name">
+              @if (errors.name) {
+                <span class="error-msg">{{ errors.name }}</span>
+              }
+
+              <label>Email Address</label>
+              <input type="email" [(ngModel)]="form.email" name="email" placeholder="Enter your email">
+              @if (errors.email) {
+                <span class="error-msg">{{ errors.email }}</span>
+              }
+
+              <label>Subject</label>
+              <input type="text" [(ngModel)]="form.subject" name="subject" placeholder="Enter subject">
+              @if (errors.subject) {
+                <span class="error-msg">{{ errors.subject }}</span>
+              }
+
+              <label>Message</label>
+              <textarea [(ngModel)]="form.message" name="message" rows="5" placeholder="Write your message here"></textarea>
+              @if (errors.message) {
+                <span class="error-msg">{{ errors.message }}</span>
+              }
+
+              <button type="submit" class="submit-btn">Send Message</button>
+
+            </form>
+          }
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+@UnemployedNotAPI_HostAddress = http://localhost:5039
+
+GET {{UnemployedNotAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

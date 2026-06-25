@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="section">
+    <div class="row justify-content-center">
+      <div class="col-md-5">
+        <div class="form-wrapper">
+
+          @if (submitted) {
+            <div class="alert-success">
+              Login successful! Welcome back to UnemployedNot.
+            </div>
+          }
+
+          <h2>Login to Your Account</h2>
+          <p>Welcome back! Don't have an account? <a routerLink="/signup">Sign up here</a>.</p>
+
+          @if (!submitted) {
+            <form (ngSubmit)="onSubmit()">
+
+              <label>Email Address</label>
+              <input type="email" [(ngModel)]="form.email" name="email" placeholder="Enter your email">
+              @if (errors.email) {
+                <span class="error-msg">{{ errors.email }}</span>
+              }
+
+              <label>Password</label>
+              <input type="password" [(ngModel)]="form.password" name="password" placeholder="Enter your password">
+              @if (errors.password) {
+                <span class="error-msg">{{ errors.password }}</span>
+              }
+
+              <div style="margin-bottom:16px;">
+                <input type="checkbox" id="remember" [(ngModel)]="form.remember" name="remember">
+                <label for="remember" style="display:inline; margin-left:6px;">Remember me</label>
+              </div>
+
+              <button type="submit" class="submit-btn">Login</button>
+
+            </form>
+
+            <p style="color:#666; font-size:13px; margin-top:16px;">
+              Forgot your password? <a href="#">Click here to reset it</a>.
+            </p>
+          }
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="section">
+    <div class="section-title">My <span>Applications</span></div>
+    <div class="section-divider"></div>
+
+    @if (message) {
+      <div [class]="messageType === 'success' ? 'alert-success' : 'alert-error'" style="margin-bottom:16px; padding:12px 16px; border-radius:4px; font-size:14px;">
+        {{ message }}
+      </div>
+    }
+
+    @if (loading) {
+      <p style="color:#888;">Loading your applications...</p>
+    }
+
+    @if (!loading && applications.length === 0) {
+      <div class="form-wrapper" style="text-align:center; padding:40px;">
+        <p style="color:#888; margin-bottom:16px;">You have not applied for any jobs yet.</p>
+        <a routerLink="/jobs" class="btn-green">Browse Jobs</a>
+      </div>
+    }
+
+    @if (!loading && applications.length > 0) {
+      <p style="color:#888; font-size:14px; margin-bottom:24px;">
+        You have applied for {{ applications.length }} job(s).
+      </p>
+
+      @for (app of applications; track app.id) {
+        <div class="job-card" style="margin-bottom:20px;">
+          <h5>{{ app.jobTitle }}</h5>
+          <div class="company">{{ app.company }}</div>
+          <div class="meta">Applied on: {{ app.appliedAt | date:'mediumDate' }} &nbsp;|&nbsp; Status: {{ app.status }}</div>
+
+          @if (editingId === app.id) {
+            <div style="margin-top:12px;">
+              <label>Cover Letter</label>
+              <textarea [(ngModel)]="editCoverLetter" rows="4" style="width:100%; background:#1a1a1a; border:1px solid #2a2a2a; color:#ccc; padding:8px; border-radius:4px; font-family:inherit; font-size:13px;"></textarea>
+              <div style="margin-top:8px;">
+                <button (click)="saveEdit(app)" class="submit-btn" style="width:auto; padding:6px 20px; margin-right:8px;">Save</button>
+                <button (click)="cancelEdit()" style="background:transparent; border:1px solid #444; color:#888; padding:6px 20px; border-radius:4px; cursor:pointer;">Cancel</button>
+              </div>
+            </div>
+          } @else {
+            <p style="margin-top:8px;">{{ app.coverLetter }}</p>
+            <div style="margin-top:12px;">
+              <button (click)="startEdit(app)" style="background:transparent; border:1px solid #2e7d32; color:#4caf50; padding:4px 14px; border-radius:3px; font-size:13px; cursor:pointer; margin-right:8px;">Edit</button>
+              <button (click)="deleteApp(app.id)" style="background:transparent; border:1px solid #c62828; color:#e57373; padding:4px 14px; border-radius:3px; font-size:13px; cursor:pointer;">Withdraw</button>
+            </div>
+          }
+        </div>
+      }
+    }
+  </div>
+</div>

@@ -1,0 +1,88 @@
+<div class="container">
+  <div class="section">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="form-wrapper">
+
+          @if (submitted) {
+            <div class="alert-success">
+              Account created successfully! Welcome to UnemployedNot.
+            </div>
+          }
+
+          <h2>Create Your Account</h2>
+          <p>Sign up for free and start applying to jobs today. Already have an account? <a routerLink="/login">Login here</a>.</p>
+
+          @if (!submitted) {
+            <form (ngSubmit)="onSubmit()">
+
+              <h3 style="color:#cccccc; font-size:15px; margin:16px 0 12px;">Personal Information</h3>
+
+              <label>Full Name</label>
+              <input type="text" [(ngModel)]="form.fullname" name="fullname" placeholder="Enter your full name">
+              @if (errors.fullname) {
+                <span class="error-msg">{{ errors.fullname }}</span>
+              }
+
+              <label>Email Address</label>
+              <input type="email" [(ngModel)]="form.email" name="email" placeholder="Enter your email">
+              @if (errors.email) {
+                <span class="error-msg">{{ errors.email }}</span>
+              }
+
+              <label>Password</label>
+              <input type="password" [(ngModel)]="form.password" name="password" placeholder="Create a password">
+              @if (errors.password) {
+                <span class="error-msg">{{ errors.password }}</span>
+              }
+
+              <label>Phone Number</label>
+              <input type="text" [(ngModel)]="form.phone" name="phone" placeholder="03XXXXXXXXX">
+              @if (errors.phone) {
+                <span class="error-msg">{{ errors.phone }}</span>
+              }
+
+              <label>City</label>
+              <input type="text" [(ngModel)]="form.city" name="city" placeholder="Enter your city">
+              @if (errors.city) {
+                <span class="error-msg">{{ errors.city }}</span>
+              }
+
+              <h3 style="color:#cccccc; font-size:15px; margin:16px 0 12px;">Account Type</h3>
+              <p style="color:#666; font-size:13px; margin-bottom:8px;">I am registering as a:</p>
+              <div style="margin-bottom:4px;">
+                <input type="radio" id="jobseeker" name="accounttype" value="jobseeker" [(ngModel)]="form.accounttype">
+                <label for="jobseeker" style="display:inline; margin-left:6px;">Job Seeker</label>
+              </div>
+              <div style="margin-bottom:12px;">
+                <input type="radio" id="employer" name="accounttype" value="employer" [(ngModel)]="form.accounttype">
+                <label for="employer" style="display:inline; margin-left:6px;">Employer</label>
+              </div>
+              @if (errors.accounttype) {
+                <span class="error-msg">{{ errors.accounttype }}</span>
+              }
+
+              <label>Date of Birth</label>
+              <input type="date" [(ngModel)]="form.dob" name="dob">
+              @if (errors.dob) {
+                <span class="error-msg">{{ errors.dob }}</span>
+              }
+
+              <div style="margin-bottom:16px;">
+                <input type="checkbox" id="terms" [(ngModel)]="form.terms" name="terms">
+                <label for="terms" style="display:inline; margin-left:6px;">I agree to the terms and conditions</label>
+              </div>
+              @if (errors.terms) {
+                <span class="error-msg">{{ errors.terms }}</span>
+              }
+
+              <button type="submit" class="submit-btn">Create Account</button>
+
+            </form>
+          }
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
